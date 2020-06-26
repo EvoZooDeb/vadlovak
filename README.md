@@ -1,2 +1,2 @@
 # vadlovak
-AI przewalski horse project
+AI project for tracking and identifying przewalski horses
