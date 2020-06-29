@@ -2,20 +2,19 @@
 AI project for tracking and identifying przewalski horses
 
 ## Recommended tools to test
-Used enviroments:
-*NVIDIA Driver Version:              440.82
-*NVIDIA CUDA Compiler Driver:        V10.1.168
-*NVIDIA cuDNN Driver:                7.6.5
-*Python3 Version:                    20.1
-*Tensorflow Version:                 2.2.0-rc4
-*Keras Version:                      2.3.0-tf
-*Numpy Version:                      1.17.4
-*Conda Version:                      4.8.2
-*Bash Version:                       5.0.16(1)-release
-*ffmpeg Version:                     4.2.2
-*R Version:                          3.6.3
-
-IMPORTANT: Not tested with other environments than listed above!
+IMPORTANT: Not tested with other environments than listed below!
+### Used enviroments:
+* NVIDIA Driver Version:              440.82
+* NVIDIA CUDA Compiler Driver:        V10.1.168
+* NVIDIA cuDNN Driver:                7.6.5
+* Python3 Version:                    20.1
+* Tensorflow Version:                 2.2.0-rc4
+* Keras Version:                      2.3.0-tf
+* Numpy Version:                      1.17.4
+* Conda Version:                      4.8.2
+* Bash Version:                       5.0.16(1)-release
+* ffmpeg Version:                     4.2.2
+* R Version:                          3.6.3
 
 ## Test run
 1) Download and install retinanet
