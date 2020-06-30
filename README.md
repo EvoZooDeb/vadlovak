@@ -17,21 +17,19 @@ IMPORTANT: Not tested with other environments than listed below!
 * R Version:                          3.6.3
 
 ## Test run
-1) Download and install retinanet
-    `git clone https://github.com/fizyr/keras-retinanet`
-2) Run ./data_prepare.sh script...
-    Automatically save video frames and generates ".csv" files for retinanet
-    e.g: `./data_prepare.sh sample/wildhorse.mp4 frames/ sample/coordinates.txt`
-3) Check the data validity with retinanet-debug
-    retinanet-debug csv <data_stucture> <object_identifier>
-    e.g: `retinanet-debug csv frames_retinenet_map.csv retinanet_class.csv`
-
-    If the squares are green, then you can train your neural network with retinanet-train command.
-4) For the first time run the retinanet with --no-weight switch
-    e.g: `retinanet-train --no-weights --epochs 10 csv frames_retinenet.csv class_retinanet.csv`
-5) If you would like to test the model, then convert the model first
-    e.g: `retinanet-convert-model snapshots/resnet50_csv_10.h5 snapshots/model_v1_10.h5`
-6) Use the attached bash script to draw boxes. (This is just a test script, where you can check the accuracy)
-    e.g: `./test_draw.sh snapshots/model_v1.h5 frames/frame_00001.png draw_boxes.png`
-7) If the results are not satisfying, then train the model with the previously calculated weights and use more data.
-    e.g: `retinanet-train --weights snapshots/resnet50_csv_10.h5--epochs 10 csv frames_retinenet.csv class_retinanet.csv`
+1) <p>Download and install retinanet</p>
+`git clone https://github.com/fizyr/keras-retinanet`
+2) <p>Run `./data_prepare.sh` script. It will save automatically video frames and generates ".csv" files for retinanet</p>
+e.g: `./data_prepare.sh sample/wildhorse.mp4 frames/ sample/coordinates.txt`
+3) <p>Check the data validity with `retinanet-debug`</p>
+<p>`retinanet-debug csv <strong><data_stucture></strong> <strong><object_identifier></strong>`</p>
+e.g: `retinanet-debug csv frames_retinenet_map.csv retinanet_class.csv` </br>
+If the squares are green, then you can train your neural network with retinanet-train command.
+4) <p>For the first time run the retinanet with --no-weight switch</p>
+e.g: `retinanet-train --no-weights --epochs 10 csv frames_retinenet.csv class_retinanet.csv`
+5) <p>If you would like to test the model, then convert the model first</p>
+e.g: `retinanet-convert-model snapshots/resnet50_csv_10.h5 snapshots/model_v1_10.h5`
+6) <p>Use the attached bash script to draw boxes. (This is just a test script, where you can check the accuracy)</p>
+e.g: `./test_draw.sh snapshots/model_v1.h5 frames/frame_00001.png draw_boxes.png`
+7) <p>If the results are not satisfying, then train the model with the previously calculated weights and use more data.</p>
+e.g: `retinanet-train --weights snapshots/resnet50_csv_10.h5--epochs 10 csv frames_retinenet.csv class_retinanet.csv`
