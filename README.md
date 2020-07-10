@@ -5,20 +5,20 @@ AI project for tracking and identifying przewalski horses
 IMPORTANT: Not tested with other environments than listed below!
 ### Used enviroments:
 * NVIDIA tools:
-    + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;440.82
-    + CUDA compiler driver:&emsp;v10.1.168
-    + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;7.6.5
-* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;3.8
-    + Tensorflow-gpu version:&nbsp;2.2.0-rc4
-    + Keras version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2.3.0-tf
+    + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;440.82
+    + CUDA compiler driver:&emsp;&emsp;&nbsp;&nbsp;v10.1.168
+    + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;7.6.5
+* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8
+    + Tensorflow-gpu version:&emsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.0-rc4
+    + Keras version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.3.0-tf
     + Numpy version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;1.17.4
-    + Conda version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;4.8.2
+    + Conda version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;4.8.2
     + Pillow version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;7.0.0
     + h5py version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;2.10.0
-* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;5.0.16
-* ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
+* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.0.16
+* ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
 * R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;3.6.3
-* Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;1.4.1
+* Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4.1
 
 ## Test run
 1) Download and install retinanet.\
