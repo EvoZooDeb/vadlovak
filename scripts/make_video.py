@@ -20,8 +20,6 @@ def get_session():
     return tf.compat.v1.Session(config=config)
 
 sess = tf.compat.v1.keras.backend.get_session()
-#keras.backend.tensorflow_backend.set_session(sess)
-#keras.backend.tensorflow_backend.set_session(get_session())
 
 model_path = sys.argv[1]                                                        # Path of neural network (created by retinanet-convert-model)
 model = models.load_model(model_path, backbone_name='resnet50')
@@ -30,6 +28,13 @@ labels_to_names = {0: 'horse'}                                                  
 image_path = sys.argv[2]                                                        # Input image path
 output_path = sys.argv[3]                                                       # Output image path
 fps = 25
+
+number_of_arguments = len(sys.argv)-1
+csv_file_path=""
+
+if number_of_arguments == 4:
+    csv_file_path = sys.argv[4]
+    text_file = open(sys.argv[4], "w")
 
 vcapture = cv2.VideoCapture(video_path)
 
@@ -62,8 +67,15 @@ def run_detection_video(video_path):
 
             boxes /= scale
             counter=0
+
+
             for box, score, label in zip(boxes[0], scores[0], labels[0]):
 
+            #  Print middle of the box. frame,x,y
+                if len(csv_file_path) != 0:
+                    exact_x = (box[0] + box[2])/2
+                    exact_y = (box[1] + box[3])/2
+                    text_file.write("{},{},{}\n".format(count,exact_x,exact_y))
             # Threshold value
                 if score < 0.48:
                     break
@@ -97,7 +109,9 @@ def run_detection_video(video_path):
             vwriter.write(detected_frame)  # overwrites video slice
 
     vcapture.release()
-    vwriter.release() 
+    vwriter.release()
+    if len(csv_file_path) != 0:
+        text_file.close()
     end = time.time()
 
     print("Total Time: ", end - start)

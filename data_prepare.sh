@@ -10,7 +10,7 @@ if [ "$#" -ne $min_arg ]; then
         echo -e "Not enough arguments!\n"
     fi
     echo -e "Arguments explanation:\n   1: input video\n   2: frames output directory\n   3: coordinates location"
-    echo "	e.g: ./data_prepare.sh sample/wildhorse.mp4 frames/ sample/coordinates.txt"
+    echo "	e.g: ./data_prepare.sh sample_data/wildhorse.mp4 frames/ sample_data/coordinates.txt"
     exit 1
 fi
 

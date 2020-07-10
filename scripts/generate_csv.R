@@ -28,8 +28,6 @@ factor <- as.factor(coord1$V1)
 coord1$V7 <- paste(args[2],list.files(args[2])[factor], sep="")
 
 #Write file
-write.table(coord1[,c(7,2:6)],
-           file = paste(basename(args[2]),"_retinenet_map.csv", sep=""),
-          ,dec=".", sep="," , col.names = FALSE, row.names = FALSE)
+write.table(coord1[,c(7,2:6)], file = 'frames_retinenet_map.csv', dec=".", sep="," , col.names = FALSE, row.names = FALSE)
 
 write.table(t(c('horse',0)),file = 'retinanet_class.csv', sep="," , col.names = FALSE, row.names = FALSE)
