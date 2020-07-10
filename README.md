@@ -7,18 +7,17 @@ IMPORTANT: Not tested with other environments than listed below!
     + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;440.82
     + CUDA compiler driver:&emsp;&emsp;&nbsp;&nbsp;v10.1.168
     + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;7.6.5
-* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.8
+* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.8
     + Tensorflow-gpu version:&emsp;&nbsp;&nbsp;&nbsp;2.2.0-rc4
     + Keras version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.3.0-tf
-    + Numpy version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;1.17.4
+    + Numpy version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;1.17.4
     + Conda version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;4.8.2
     + Pillow version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;7.0.0
     + h5py version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2.10.0
-* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;5.0.16
-* ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
-* R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.6.3
-* Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;1.4.1
-
+* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;5.0.16
+* ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
+* R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.6.3
+* Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;1.4.1
 ## Test run
 1) Download and install retinanet.\
 `git clone https://github.com/fizyr/keras-retinanet`
