@@ -25,7 +25,7 @@ model_path = sys.argv[1]                                                        
 model = models.load_model(model_path, backbone_name='resnet50')
 labels_to_names = {0: 'horse'}                                                  # Model labels and its index value
 
-image_path = sys.argv[2]                                                        # Input image path
+video_path = sys.argv[2]                                                        # Input image path
 output_path = sys.argv[3]                                                       # Output image path
 fps = 25
 
