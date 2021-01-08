@@ -46,7 +46,7 @@ def detection_on_image(image_path):
                 exact_y = (box[1] + box[3])/2
                 text_file.write("{},{}\n".format(exact_x,exact_y))
         # Threshold value
-            if score < 0.48:
+            if score < 0.01:
                 break
         # Auxilary variables
             big_square = [31,0,255]                                             # Blue color definition

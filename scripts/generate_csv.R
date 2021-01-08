@@ -1,5 +1,5 @@
 #How to RUN:
-#Rscript generate_csv.R <coordinates> <frames_folder>
+#Rscript generate_csv.R <coordinates> <frames_folder> <scale_size>
 
 # Read from argument
 args = commandArgs(trailingOnly = TRUE)
