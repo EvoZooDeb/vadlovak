@@ -1,0 +1,4 @@
+Final best anchor configuration
+Ratios: [0.532, 1.0, 1.881]
+Scales: [0.542, 0.657, 1.76]
+Number of labels that don't have any matching anchor: 0
