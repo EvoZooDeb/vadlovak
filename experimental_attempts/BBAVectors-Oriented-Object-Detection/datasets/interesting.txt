@@ -1,0 +1,24 @@
+python3 /home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/main.py --data_dir /home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/datasets/DOTA_devkit/horse/ --resume_train /home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/provided_neuralnetwork/model_50.pth --dataset dota --num_epoch 1000 --batch_size 1 --phase train
+loaded weights from /home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/provided_neuralnetwork/model_50.pth, epoch 50
+Setting up data...
+Starting training...
+----------
+Epoch: 50/1000 
+Traceback (most recent call last):
+  File "/home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/main.py", line 58, in <module>
+    ctrbox_obj.train_network(args)
+  File "/home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/train.py", line 132, in train_network
+    criterion=criterion)
+  File "/home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/train.py", line 167, in run_epoch
+    loss = criterion(pr_decs, data_dict)
+  File "/opt/anaconda3/envs/BBAV/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/loss.py", line 114, in forward
+    hm_loss  = self.L_hm(pr_decs['hm'], gt_batch['hm'])
+  File "/opt/anaconda3/envs/BBAV/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/wildhorse_project/programs/BBAVectors-Oriented-Object-Detection/loss.py", line 88, in forward
+    pos_loss = torch.log(pred) * torch.pow(1 - pred, 2) * pos_inds
+RuntimeError: The size of tensor a (15) must match the size of tensor b (16) at non-singleton dimension 1
+
+## BBAV előretanított hálózatát használva és dota datasetet kiegészítve a horse osztályal
