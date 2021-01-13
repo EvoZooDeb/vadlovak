@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89437d70-a817-4bbb-9271-868eceb0fddc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
+  </component>
+  <component name="ProjectId" id="1cUgUFXdajrswsv4KO6ipo8UKPc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.55287355" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CustomVisionSamples" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.microsoft.azure.cognitiveservices.vision.customvision.samples.CustomVisionSamples" />
+      <module name="custom-vision-java" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Desktop/conf" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.microsoft.azure.cognitiveservices.vision.customvision.samples.CustomVisionSamples" />
+      <module name="custom-vision-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89437d70-a817-4bbb-9271-868eceb0fddc" name="Default Changelist" comment="" />
+      <created>1590588599631</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590588599631</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$USER_HOME$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="407" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593520420650">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="407" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593520420650" />
+    <state x="2338" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1590741561652" />
+    <state x="2612" y="322" width="525" height="415" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593523727068">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="692" y="310" width="525" height="415" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1590590039093" />
+    <state x="2612" y="322" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593523727068" />
+    <state x="643" y="255" width="624" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593519062481">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="643" y="255" width="624" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593519062481" />
+    <state x="2663" y="288" width="424" height="482" key="FileChooserDialogImpl" timestamp="1593603789922">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593519423257" />
+    <state x="2663" y="288" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593603789922" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1593525424131">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593520424387" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593525424131" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1593525424131">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593520424387" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593525424131" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1593525424131">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593520424387" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593525424131" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1593525424131">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1593520424387" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593525424131" />
+    <state x="2369" y="175" width="1024" height="843" key="SettingsEditor" timestamp="1593526187180">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="175" width="1024" height="843" key="SettingsEditor/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593526187180" />
+    <state x="574" y="180" width="762" height="677" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591105526571">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="574" y="180" width="762" height="677" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1591105526571" />
+    <state x="2494" y="187" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1590742150746" />
+    <state x="2613" y="284" width="542" height="509" key="extract.method.dialog" timestamp="1591261161881">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="284" width="542" height="509" key="extract.method.dialog/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1591261161881" />
+    <state x="2201" y="114" width="1347" height="816" key="new project wizard" timestamp="1593526480056">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2201" y="114" width="1347" height="816" key="new project wizard/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593526480056" />
+    <state x="281" y="110" width="1347" height="816" key="new project wizard/0.0.1920.1039@0.0.1920.1039" timestamp="1592663038794" />
+    <state x="2544" y="173" width="672" height="703" key="search.everywhere.popup" timestamp="1590742258136">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="624" y="166" width="670" height="676" key="search.everywhere.popup/0.0.1920.1039/1920.0.1920.1080@0.0.1920.1039" timestamp="1590591001061" />
+    <state x="2544" y="173" width="672" height="703" key="search.everywhere.popup/0.0.1920.1039/1920.0.1920.1080@1920.0.1920.1080" timestamp="1590742258136" />
+  </component>
+</project>
