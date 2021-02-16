@@ -4,22 +4,22 @@ AI project for tracking and identifying przewalski horses
 IMPORTANT: Not tested with other environments than listed below!
 ### Used enviroments:
 * NVIDIA tools (Tested with RTX2070 or K80):
-    + Driver version:460.39
-    + CUDA compiler driver:v11.2
-    + cuDNN driver:8.1.0.77
-* Python version:3.7.9
+    + Driver version: 460.39
+    + CUDA compiler driver: v11.2
+    + cuDNN driver: 8.1.0.77
+* Python version: 3.7.9
 * Python packages:
-    + pip:20.3.3
-    + tensorflow:2.4.1
-    + tensorflow-gpu:2.4.1
-    + keras:2.4.3
-    + keras-retinanet:1.0.0
-    + matplotlib:3.3.4
-    + opencv-python:4.5.1.48
-* Bash version:5.1.0
-* ffmpeg version:4.2.2
-* R version:4.0.3
-* Julia version:1.4.1
+    + pip: 20.3.3
+    + tensorflow: 2.4.1
+    + tensorflow-gpu: 2.4.1
+    + keras: 2.4.3
+    + keras-retinanet: 1.0.0
+    + matplotlib: 3.3.4
+    + opencv-python: 4.5.1.48
+* Bash version: 5.1.0
+* ffmpeg version: 4.2.2
+* R version: 4.0.3
+* Julia version: 1.4.1
 ## Test run
 1) Create environment with conda and install dependency \
     `conda create --name RETINANET python=3.7.9` \
