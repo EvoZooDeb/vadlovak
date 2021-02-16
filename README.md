@@ -3,31 +3,40 @@ AI project for tracking and identifying przewalski horses
 ## Recommended tools to test
 IMPORTANT: Not tested with other environments than listed below!
 ### Used enviroments:
-* NVIDIA tools:
-    + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;440.82
-    + CUDA compiler driver:&emsp;&emsp;&nbsp;&nbsp;v10.1.168
-    + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;7.6.5
-* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.8
+* NVIDIA tools (Tested with RTX2070 or K80):
+    + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;460.39
+    + CUDA compiler driver:&emsp;&emsp;&nbsp;&nbsp;v11.2
+    + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.0.77
+* Python version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.7.9
 * Python packages:
-    + Pip version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;20.1
-    + Tensorflow-gpu version:&emsp;&nbsp;&nbsp;&nbsp;2.2.0-rc4
-    + Keras version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.3.0-tf
-    + Numpy version:&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.17.4
-    + Conda version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;4.8.2
-    + Pillow version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;7.0.0
-    + h5py version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2.10.0
-* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;5.0.16
+    + pip:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;20.3.3
+    + tensorflow:&emsp;&nbsp;&nbsp;&nbsp;2.4.1
+    + tensorflow-gpu:&emsp;&nbsp;&nbsp;&nbsp;2.4.1
+    + keras:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.4.3
+    + keras-retinanet:&emsp;&emsp;&emsp;&emsp;1.0.0
+    + matplotlib:&emsp;&nbsp;&nbsp;&nbsp;3.3.4
+    + opencv-python:&emsp;&nbsp;&nbsp;&nbsp;4.5.1.48
+* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;5.1.0
 * ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
-* R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;3.6.3
+* R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;4.0.3
 * Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;1.4.1
 ## Test run
-1) Download and install retinanet.\
-`git clone https://github.com/fizyr/keras-retinanet`
+1) Create environment with conda and install dependency \
+    `conda create --name RETINANET python=3.7.9` \
+    &emsp;`conda activate RETINANET` \
+    &emsp;&emsp;`pip install tensorflow==2.4.1` \
+    &emsp;&emsp;`pip install tensorflow-gpu==2.4.1` \
+    &emsp;&emsp;`pip install keras==2.4.3` \
+    &emsp;&emsp;`pip install keras_retinanet==1.0.0` \
+    &emsp;&emsp;`pip install matplotlib==3.3.4` \
+    &emsp;&emsp;`pip install opencv-python==4.5.1.48` \
+  If you would like to train with CPU, install "tensorflow-cpu" instead of "tensorflow-gpu". \
+    &emsp;&emsp;`pip install tensorflow-cpu==2.4.1` \
 2) Run `./data_prepare.sh` script. It will save automatically video frames and generates ".csv" files for retinanet.\
 fomat: `./data_prepare.sh <video_file> <output_frame_folder> <bounding_box_coordinates>`\
-e.g: `./data_prepare.sh sample/wildhorse.mp4 frames/ sample/coordinates.txt`
+e.g: `./data_prepare.sh sample_data/wildhorse.mp4 frames/ sample_data/coordinates.txt`
     > After the first run you will find two files:
-    > + frames_retinenet_map.csv &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;#Contains premapped positions with file path
+    > + original_frames_map.csv &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;#Contains premapped positions with file path
     > + retinanet_class.csv &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;#Contains the predefined classes
 3) Check the data validity with `retinanet-debug`.\
 format: `retinanet-debug csv <data_stucture> <object_identifier>`\
