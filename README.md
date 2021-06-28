@@ -25,7 +25,7 @@ IMPORTANT: Not tested with other environments than listed below!
 `git clone https://github.com/fizyr/keras-retinanet`
 2) Run `./data_prepare.sh` script. It will save automatically video frames and generates ".csv" files for retinanet.\
 fomat: `./data_prepare.sh <video_file> <output_frame_folder> <bounding_box_coordinates>`\
-e.g: `./data_prepare.sh sample/wildhorse.mp4 frames/ sample/coordinates.txt`
+e.g: `./data_prepare.sh sample_data/wildhorse.mp4 frames/ sample_data/coordinates.txt`
     > After the first run you will find two files:
     > + frames_retinenet_map.csv &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;#Contains premapped positions with file path
     > + retinanet_class.csv &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;#Contains the predefined classes
