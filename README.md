@@ -59,6 +59,7 @@ e.g: `./DBt_video.sh snapshots/model_v1.h5 sample/wildhorse.mp4 wildhorse_with_b
     format: `./DBt_picture.sh <converted_model> <input_test_video> <output_video> <csv_output_path>` \
     e.g: `./DBt_picture.sh snapshots/model_v1.h5 sample/wildhorse.mp4 wildhorse_with_box.mp4 box_pos.csv`
 
+## Result example
 ![Detection result_1](https://github.com/EvoZooDeb/vadlovak/blob/master/sample_data/result.png?raw=true)
 
 Explaination of .csv files:
