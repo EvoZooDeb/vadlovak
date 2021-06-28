@@ -1,5 +1,5 @@
 
-# Wildhorse
+# Wildhorse Detection
 AI project for tracking and identifying przewalski horses
 ## Recommended tools to test
 IMPORTANT: Not tested with other environments than listed below! We used 4K Aerial footage and the scripts prepared only for this resoultion. 
