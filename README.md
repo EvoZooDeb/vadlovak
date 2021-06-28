@@ -1,14 +1,15 @@
+
 # Wildhorse
 AI project for tracking and identifying przewalski horses
 ## Recommended tools to test
 IMPORTANT: Not tested with other environments than listed below!
 ### Used enviroments:
-* NVIDIA tools:
+ * NVIDIA tools:
     + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;440.82
     + CUDA compiler driver:&emsp;&emsp;&nbsp;&nbsp;v10.1.168
     + cuDNN driver:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;7.6.5
-* Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.8
-* Python packages:
+ * Python3 version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3.8
+ * Python packages:
     + Pip version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;20.1
     + Tensorflow-gpu version:&emsp;&nbsp;&nbsp;&nbsp;2.2.0-rc4
     + Keras version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2.3.0-tf
@@ -16,28 +17,30 @@ IMPORTANT: Not tested with other environments than listed below!
     + Conda version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;4.8.2
     + Pillow version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;7.0.0
     + h5py version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;2.10.0
-* Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;5.0.16
-* ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
-* R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;3.6.3
-* Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;1.4.1
+ * Bash version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;5.0.16
+ * ffmpeg version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2
+ * R version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;3.6.3
+ * Julia version:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;1.4.1
 ## Test run
 1) Download and install retinanet.\
 `git clone https://github.com/fizyr/keras-retinanet`
 2) Run `./data_prepare.sh` script. It will save automatically video frames and generates ".csv" files for retinanet.\
 fomat: `./data_prepare.sh <video_file> <output_frame_folder> <bounding_box_coordinates>`\
-e.g: `./data_prepare.sh sample_data/wildhorse.mp4 frames/ sample_data/coordinates.txt`
-    > After the first run you will find two files:
-    > + frames_retinenet_map.csv &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;#Contains premapped positions with file path
-    > + retinanet_class.csv &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;#Contains the predefined classes
+e.g: `./data_prepare.sh sample_data/wildhorse.mp4 sample_data/coordinates.txt` The script will generate 3 new folders and a result_dataset.csv file:
+	 * frames/
+	 * crop/
+	 * 4pieces/
+	 * result_dataset.csv
 3) Check the data validity with `retinanet-debug`.\
-format: `retinanet-debug csv <data_stucture> <object_identifier>`\
-e.g: `retinanet-debug csv frames_retinenet_map.csv retinanet_class.csv`
-    > If the squares are green, then you can train your neural network with retinanet-train command.
+format: `retinanet-debug --show-annotation csv <data_stucture> <object_identifier>`\
+e.g: `retinanet-debug --show-annotation csv result_dataset.csv sample_data/class.csv`
+    > If the squares are green and the positions are correct, then you can train your neural network with retinanet-train command.
+    HINT: If you used blender to mark objects, then you must reverse y axis.  Take the comment out of line 80 from "`script/fitting_crop.sh`"
 4) Start training:
     + For the first time, run the retinanet with `--no-weight` switch.\
-    e.g: `retinanet-train --no-weights --epochs 10 csv frames_retinenet_map.csv retinanet_class.csv`
+    e.g: `retinanet-train --no-weights --epochs 10 csv result_dataset.csv class.csv`
     + If you would like to train your previously trained model:\
-    e.g: `retinanet-train --weights snapshot/resnet50_csv_10.h5 --epochs 10 --snapshot-path snapshot/ csv frames_retinenet_map.csv retinanet_class.csv`
+    e.g: `retinanet-train --weights snapshot/resnet50_csv_10.h5 --epochs 10 --snapshot-path snapshot/ csv result_dataset.csv class.csv`
 5) To test your model, you need to convert it first.\
 format: `retinanet-convert-model <weight> <converted model_name>`\
 e.g: `retinanet-convert-model snapshots/resnet50_csv_10.h5 snapshots/model_v1_10.h5`
