@@ -2,7 +2,7 @@
 # Wildhorse
 AI project for tracking and identifying przewalski horses
 ## Recommended tools to test
-IMPORTANT: Not tested with other environments than listed below!
+IMPORTANT: Not tested with other environments than listed below! We used 4K Aerial footage and the scripts prepared only for this resoultion. These scripts contains a lots of constant variables, which means you have to modify some of them if you would like to use this method.
 ### Used enviroments:
  * NVIDIA tools:
     + Driver version:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;440.82
