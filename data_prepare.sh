@@ -1,6 +1,6 @@
 #!/bin/bash
 
-min_arg=3
+min_arg=2
 
 # Standard message
 if [ "$#" -ne $min_arg ]; then
@@ -15,9 +15,23 @@ if [ "$#" -ne $min_arg ]; then
 fi
 
 # Save arguments
+start_script_path=$(realpath $0)
+new_folder_frames=$(echo $start_script_path | awk -F 'data_prepare.sh' '{ print $1 }')"frames/"
+new_folder_crop=$(echo $start_script_path | awk -F 'data_prepare.sh' '{ print $1 }')"crop/"
+new_folder_4pieces=$(echo $start_script_path | awk -F 'data_prepare.sh' '{ print $1 }')"4pieces/"
+script_path=$(echo $start_script_path | awk -F 'data_prepare.sh' '{ print $1 }')"scripts/"
+
+#Arguments
 input_file=$(realpath $1)
-output_folder=$(realpath $2)
-coord_loc=$(realpath $3)
+coord_loc=$(realpath $2)
+
+#Script defininitons
+script_crop_black=$script_path"mass_crop_black_border.sh"
+script_4pieces=$script_path"4pieces_crop.sh"
+script_fitting=$script_path"fitting_crop.sh "$coord_loc
+
+input_file=$(realpath $1)
+coord_loc=$(realpath $2)
 
 # Check the first argument <input_file>
 if [ ! -f "$input_file" ]; then
@@ -25,10 +39,16 @@ if [ ! -f "$input_file" ]; then
     exit 1
 fi
 
-# Check the second argument <output_folder>
-if [ ! -d "$output_folder" ]; then
-    mkdir $output_folder
+
+# Create folder <new_folder_frames>
+echo "############################################################"
+if [ ! -d "$new_folder_frames" ]; then
+    mkdir $new_folder_frames
+    echo $new_folder_frames " - CREATED SUCCESFULLY"
+else
+    echo $new_folder_frames " - FOLDER CHECKED"
 fi
+echo "############################################################"
 
 # Check the first argument <coord_loc>
 if [ ! -f "$coord_loc" ]; then
@@ -36,20 +56,49 @@ if [ ! -f "$coord_loc" ]; then
     exit 1
 fi
 
-
-# Correct the path if it necessary
-if [ ${output_folder: -1} != "/" ]; then
-    output_folder+="/"
-fi
-
 # Append filename
-frame_out=$output_folder"frame_%05d.png"
+frame_out=$new_folder_frames"frame_%05d.png"
 
 # Run command
+echo "GENERATING FRAMES INTO THE "\"$new_folder_frames"\" FOLDER"
+echo "############################################################"
+echo "FFMPEG EXECUTION....."
 cmd="ffmpeg -i $input_file $frame_out"
 eval $cmd
+echo "############################################################"
 
-#Rscript file path
-gen_csv_path=$(dirname $(realpath $0))"/scripts/generate_csv.R"
+if [ ! -d "$new_folder_crop" ]; then
+    mkdir $new_folder_crop
+    echo $new_folder_crop " - CREATED SUCCESFULLY"
+else
+    echo $new_folder_crop " - FOLDER CHECKED"
+fi
+echo "############################################################"
 
-Rscript $gen_csv_path $coord_loc $output_folder
+if [ ! -d "$new_folder_4pieces" ]; then
+    mkdir $new_folder_4pieces
+    echo $new_folder_4pieces " - CREATED SUCCESFULLY"
+else
+    echo $new_folder_4pieces " - FOLDER CHECKED"
+fi
+echo "############################################################"
+
+echo "EXECUTION OF "\"$script_crop_black"\" IS RUNNING (Remove black borders from top and bottom)"
+echo "(Please wait!!!)"
+cmd=$script_crop_black
+eval $cmd
+echo "############################################################"
+
+echo "EXECUTION OF "\"$script_4pieces"\" IS RUNNING (Cut the previously generated pictures into 4 pieces)"
+echo "(Please wait!!!)"
+cmd=$script_4pieces
+eval $cmd
+echo "############################################################"
+
+echo "EXECUTION OF "\"$script_fitting"\" IS RUNNING (Create dataset. Pair the coordinates with pictures.)"
+echo "(Please wait!!!)"
+cmd=$script_fitting
+eval $cmd
+path_of_results=$(echo $start_script_path | awk -F 'data_prepare.sh' '{ print $1 }')"result_dataset.csv"
+echo "Generation successfully! You will find the \"csv\" in $path_of_results
+echo "############################################################"

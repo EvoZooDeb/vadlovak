@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # Input argument, this variable must be a directory which contains the pictures
-    foldername="/home/big/AI/test2"
-    #foldername="/home/dkatona/temp/"
+    foldername=$(realpath $0 | awk -F 'scripts/4pieces_crop.sh' '{ print $1 }')"crop/" 
 # Output folder name where the program will crop the original 4k pictures
-    output_folder="/home/big/AI/test_pieces2/"               # MUST MODIFY
-    #output_folder="/home/dkatona/temp/"
+    output_folder=$(realpath $0 | awk -F 'scripts/4pieces_crop.sh' '{ print $1 }')"4pieces/" 
 
 # Check the second argument <output_folder>
 if [ ! -d "$foldername" ]; then

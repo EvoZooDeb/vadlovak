@@ -18,13 +18,13 @@
 
 
 # Output path with the first part of the file name
-main_name="/home/wildhorse_project/experimental_attempts/4pieces_way/4pieces_pic_p5_180913_2_crop_overlap40/V180913_2_12fps_4k_"        # MUST MODIFY
+main_name=$(realpath $0 | awk -F 'scripts/fitting_crop.sh' '{ print $1 }')"4pieces/frame_"
 
 # Trainset output location
-output_file="dataset_180913_2_overlap40_16.txt"                                                                                            # MUST MODIFY
+output_file=$(realpath $0 | awk -F 'scripts/fitting_crop.sh' '{ print $1 }')"result_dataset.csv"
 
 # Read bounding boxes
-filename="/home/wildhorse_project/experimental_attempts/4pieces_way/dataset/bounding_box/bounding_box_orig_coord_p5_[Bbox].txt"                       # MUST MODIFY
+filename=$1
 
 # Parameters of tiles. Change these parameters if you want to change the size of pictures
 tile_pic_x=1920        # Size of tiles in X axis
@@ -63,18 +63,21 @@ do
   frame=$(awk -F, '{print $1}' <<< $line)                              # Get frame number
   case "${#frame}" in
   "1")
-    frame="000"$frame
+    frame="0000"$frame
     ;;
   "2")
-    frame="00"$frame
+    frame="000"$frame
     ;;
   "3")
+    frame="00"$frame
+    ;;
+  "4")
     frame="0"$frame
     ;;
   esac
   x=$(awk -F. '{print $1}' <<< $(awk -F, '{print $2}' <<< $line))      # Get X
   y=$(awk -F. '{print $1}' <<< $(awk -F, '{print $3}' <<< $line))      # Get Y
-  y=$((2160-$y))
+  #y=$((216-$y))
   y=$(($y-$height_of_crop))                                                       # Normalize y
 
   #LT
@@ -110,7 +113,8 @@ do
     echo $main_name$frame"_RT.png",$(($new_x-$half_box_px)),$(($new_y-$half_box_px)),$(($new_x+$half_box_px)),$(($new_y+$half_box_px)),'"horse"' >> $output_file
   fi
 done < "$filename"
-#Some basic information
+
+# Some basic information
 echo "---------------------------------------------"
 echo "LT:" $t1
 echo "RT:" $t2
